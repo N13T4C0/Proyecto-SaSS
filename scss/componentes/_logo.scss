@@ -1,0 +1,24 @@
+@use "../abstracts" as a;
+
+// LOGO
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: a.$font-heading;
+    font-size: 1.5rem;
+    color: a.color(texto-primary);
+    letter-spacing: 1px;
+    text-decoration: none;
+    flex-shrink: 0;
+
+    &__icono {
+        font-size: 1.4rem;
+        color: a.color(accent);
+        line-height: 1;
+    }
+
+    span {
+        color: a.color(accent);
+    }
+}

@@ -1,0 +1,20 @@
+@use "../abstracts" as a;
+
+// Layout general: secciones y grid principal
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.seccion {
+    padding: 5rem 0;
+
+    &__encabezado {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+}
+
+// Grid de tarjetas de anime
+

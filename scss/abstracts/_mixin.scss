@@ -1,0 +1,121 @@
+/// Proyecto: WakuWaku - Landing Page de Anime
+/// @author nieto
+@use "sass:map";
+@use "./variables" as vars;
+
+/// MIXIN: CENTRADO CON FLEXBOX
+/// Centra el contenido horizontal y verticalmente
+/// @group Layout
+/// @param {String} $justify [center] - Alineación horizontal (justify-content)
+/// @param {String} $align [center] - Alineación vertical (align-items)
+/// @param {String} $direccion [column] - Dirección de los hijos (flex-direction)
+@mixin centrar($justify: center, $align: center, $direccion: column) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direccion;
+}
+
+/// MIXIN: ESTILOS DE NAVEGACIÓN
+/// Aplica estilos base para el menú de navegación
+/// @group Componentes
+@mixin nav {
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: vars.$color-nav-link;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: vars.$color-accent;
+        }
+    }
+}
+
+/// MIXIN: GRID FLEXIBLE CON AUTO-FIT
+/// Crea una rejilla grid con columnas que se ajustan automáticamente
+/// @group Layout
+/// @param {Length} $min-size [18rem] - Tamaño mínimo de cada columna
+/// @param {Length} $gap [1.5rem] - Espacio entre elementos
+@mixin grid-flexible($min-size: 18rem, $gap: 1.5rem) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($min-size, 1fr));
+    gap: $gap;
+}
+
+/// MIXIN: TARJETA DESTACADA
+/// Aplica estilos especiales para resaltar una tarjeta
+/// @group Componentes
+/// @param {Color} $color-fondo [#1e1e2e] - Color de fondo de la tarjeta
+/// @param {Color} $color-borde [#e63361] - Color del borde
+/// @param {Color} $color-titulo [#e63361] - Color del título
+@mixin tarjeta-destacada(
+    $color-fondo:  #1e1e2e,
+    $color-borde:  #e63361,
+    $color-titulo: #e63361
+) {
+    background-color: $color-fondo;
+    border: 2px solid $color-borde;
+
+    .card__titulo {
+        color: $color-titulo;
+    }
+}
+
+/// MIXIN: MEDIA QUERY RESPONSIVE
+/// Envuelve el contenido en un media query con max-width
+/// @group Layout
+/// @param {String} $clave - Clave del mapa $sizes (small, medium, large, xlarge, xxlarge)
+@mixin media($clave) {
+    $size: map.get(vars.$sizes, $clave);
+
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+
+/// MIXIN: BOTÓN BASE
+/// Estilos base reutilizables para cualquier botón
+/// @group Componentes
+/// @param {Color} $bg [#e63361] - Color de fondo del botón
+/// @param {Color} $color [#ffffff] - Color del texto
+/// @param {Length} $padding [0.6rem 1.4rem] - Padding interior
+@mixin btn-base($bg: #e63361, $color: #ffffff, $padding: 0.6rem 1.4rem) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: $padding;
+    background-color: $bg;
+    color: $color;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: vars.$font-body;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+/// MIXIN: OVERLAY DE IMAGEN
+/// Aplica un gradiente oscuro sobre una imagen de fondo
+/// @group Layout
+/// @param {Color} $color [rgba(0,0,0,0.6)] - Color del overlay
+@mixin img-overlay($color: rgba(0, 0, 0, 0.6)) {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: $color;
+    }
+}

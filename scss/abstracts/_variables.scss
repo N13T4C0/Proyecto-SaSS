@@ -1,0 +1,74 @@
+/// Proyecto: WakuWaku - Landing Page de Anime
+/// @author nieto
+@use "sass:map";
+@use "sass:math";
+
+/// Paleta de colores del proyecto
+/// @group Colores
+/// @type Map
+$color-fondo: (
+    primary:        #0d0d0d,
+    secondary:      #1a1a2e,
+    header-fondo:   #111111,
+    hero-overlay:   rgba(0, 0, 0, 0.6),
+    card-fondo:     #1e1e2e,
+    footer-fondo:   #0a0a0a,
+    accent:         #e63361,
+    accent-hover:   #c4274f,
+    texto-primary:  #ffffff,
+    texto-secondary:#b0b0c0,
+    badge-fondo:    rgba(230, 51, 97, 0.2),
+    badge-borde:    #e63361,
+);
+
+/// Color de enlace de navegación
+/// @group Colores
+$color-nav-link: #ffffff;
+
+/// Color de acento principal (rosa/rojo)
+/// @group Colores
+$color-accent: #e63361;
+
+/// Obtiene un color del mapa $color-fondo
+/// @group Colores
+/// @param {String} $color-name - Nombre del color a buscar
+/// @return {Color} Valor del color solicitado
+@function color($color-name) {
+    @if map.has-key($color-fondo, $color-name) {
+        @return map.get($color-fondo, $color-name);
+    } @else {
+        @error "El color '#{$color-name}' no existe en $color-fondo.";
+    }
+}
+
+/// Tamaños de breakpoints para responsive design
+/// @group TamañosResponsivos
+/// @type Map
+$sizes: (
+    small:   576px,
+    medium:  768px,
+    large:   997px,
+    xlarge:  1200px,
+    xxlarge: 1400px,
+);
+
+/// Escala tipográfica del proyecto
+/// @group Tipografia
+/// @type Map
+$font-sizes: (
+    xs:   0.75rem,
+    sm:   0.875rem,
+    base: 1rem,
+    md:   1.25rem,
+    lg:   1.5rem,
+    xl:   2rem,
+    xxl:  3rem,
+);
+
+/// Familia tipográfica para títulos
+/// @group Tipografia
+$font-heading: 'Bebas Neue', cursive;
+
+/// Familia tipográfica para texto general
+/// @group Tipografia
+$font-body: 'Inter', sans-serif;

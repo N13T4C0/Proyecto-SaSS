@@ -1,0 +1,12 @@
+@use "../abstracts" as a;
+
+// Etiquetas de género
+.etiqueta {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background-color: a.color(badge-fondo);
+    border: 1px solid a.color(badge-borde);
+    color: a.color(accent);
+    border-radius: 2rem;
+    font-size: 0.75rem;
+}

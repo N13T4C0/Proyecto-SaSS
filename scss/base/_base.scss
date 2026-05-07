@@ -1,0 +1,18 @@
+@use "../abstracts" as a;
+
+// Estilos globales base del proyecto
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: a.$font-body;
+    background-color: a.color(primary);
+    color: a.color(texto-primary);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: a.$font-heading;
+    line-height: 1.2;
+}

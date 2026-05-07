@@ -1,0 +1,20 @@
+{
+  "name": "proyectosass",
+  "version": "1.0.0",
+  "description": "Landing page WakuWaku - Proyecto final SASS y Parcel",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "sassdoc": "sassdoc scss/**/*.scss -d sassdoc"
+  },
+  "keywords": [],
+  "author": "nieto",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.4",
+    "parcel": "^2.13.3",
+    "sass": "^1.87.0",
+    "sassdoc": "^2.7.4"
+  }
+}

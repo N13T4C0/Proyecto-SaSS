@@ -1,0 +1,61 @@
+@use "../abstracts" as a;
+
+// ENCABEZADO
+.encabezado {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 0.85rem 2rem;
+    // fondo semitransparente para que el hero se vea a través; blur desenfoca lo que hay detrás
+    background-color: rgba(10, 10, 10, 0.25);
+    backdrop-filter: blur(2px);
+
+    &__busqueda {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 2rem;
+        padding: 0.45rem 1rem;
+        flex: 1;
+        max-width: 300px;
+
+        input {
+            background: none;
+            border: none;
+            outline: none;
+            color: a.color(texto-primary);
+            font-family: a.$font-body;
+            font-size: 0.85rem;
+            width: 100%;
+
+            &::placeholder {
+                color: a.color(texto-secondary);
+            }
+        }
+    }
+
+    .navegacion {
+        margin-left: auto;
+    }
+
+    @include a.media(medium) {
+        flex-wrap: wrap;
+        padding: 0.75rem 1rem;
+
+        &__busqueda {
+            max-width: 100%;
+            flex: 1 1 100%;
+        }
+
+        .navegacion {
+            margin-left: 0;
+        }
+    }
+}

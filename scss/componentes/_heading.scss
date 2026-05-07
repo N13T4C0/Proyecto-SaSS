@@ -1,0 +1,14 @@
+@use "../abstracts" as a;
+
+// Titulos de seccion
+.titulo-seccion {
+    font-family: a.$font-heading;
+    font-size: 2rem;
+    color: a.color(texto-primary);
+    text-align: center;
+    margin-bottom: 2rem;
+
+    span {
+        color: a.color(accent);
+    }
+}

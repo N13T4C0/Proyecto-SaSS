@@ -1,0 +1,46 @@
+@use "../abstracts" as a;
+
+// Boton primario (acento rosa relleno)
+.btn-primario {
+    @include a.btn-base(a.color(accent), a.color(texto-primary));
+}
+
+// Boton secundario (contorno)
+.btn-contorno {
+    @include a.btn-base(transparent, a.color(accent));
+    border: 1px solid a.color(accent);
+
+    &:hover {
+        background-color: a.color(accent);
+        color: a.color(texto-primary);
+    }
+}
+
+// Boton icono
+.btn-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: a.color(card-fondo);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.5rem;
+    color: a.color(texto-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+        border-color: a.color(accent);
+        background-color: rgba(230, 51, 97, 0.15);
+    }
+}
+
+// Boton CTA grande (encabezado, hero)
+.btn-cta {
+    @include a.btn-base(a.color(accent), a.color(texto-primary), 0.6rem 1.4rem);
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
