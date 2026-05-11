@@ -1,0 +1,38 @@
+@use "../abstracts" as a;
+
+.relacionados {
+    padding: 3rem 0;
+    @include a.centrar($justify: center, $align: center, $direccion: column);
+
+    &__titulo {
+        text-align: center;
+        margin-bottom: 2.5rem;
+        color: a.color(accent);
+    }
+
+    &__carrusel {
+        width: 100%;
+        // sino sale la linea cuandose mueve
+        overflow: hidden;
+
+        &:hover .relacionados__track {
+            animation-play-state: paused;
+        }
+    }
+
+    &__track {
+        display: flex;
+        gap: 1.5rem;
+        width: max-content;
+        animation: carrusel-scroll 18s linear infinite;
+    }
+}
+
+@keyframes carrusel-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,89 @@
+@use "../abstracts" as a;
+
+.suscripcion {
+    padding: 5rem 2rem;
+    background-color: a.color(primary);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+    &__interior {
+        max-width: 860px;
+        margin: auto;
+        @include a.grid-flexible(18rem, 5rem);
+        align-items: center;
+    }
+
+    &__titulo {
+        font-family: a.$font-heading;
+        font-size: 2.5rem;
+        color: a.color(accent);
+        margin-bottom: 1rem;
+
+        @include a.media(small) {
+            font-size: 2rem;
+        }
+    }
+
+    &__descripcion {
+        font-size: 0.95rem;
+        color: a.color(texto-secondary);
+        line-height: 1.7;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    &__grupo {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    &__label {
+        font-size: 0.8rem;
+        color: a.color(texto-secondary);
+        letter-spacing: 0.05em;
+    }
+
+    &__input {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 0.5rem;
+        padding: 0.7rem 1rem;
+        color: a.color(texto-primary);
+        font-family: a.$font-body;
+        font-size: 0.9rem;
+        outline: none;
+        transition: border-color 0.3s ease;
+
+        &::placeholder {
+            color: a.color(texto-secondary);
+        }
+
+        &:focus {
+            border-color: a.color(accent);
+        }
+    }
+
+    &__select {
+        cursor: pointer;
+
+        option {
+            background-color: a.color(secondary);
+            color: a.color(texto-primary);
+        }
+    }
+
+    &__btn {
+        align-self: flex-start;
+        margin-top: 0.5rem;
+
+        @include a.media(small) {
+            align-self: stretch;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+}

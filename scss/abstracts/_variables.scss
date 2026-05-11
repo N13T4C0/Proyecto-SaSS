@@ -11,7 +11,7 @@ $color-fondo: (
     secondary:      #1a1a2e,
     header-fondo:   #111111,
     hero-overlay:   rgba(0, 0, 0, 0.6),
-    card-fondo:     #1e1e2e,
+    card-fondo:     #000000ae,
     footer-fondo:   #0a0a0a,
     accent:         #e63361,
     accent-hover:   #c4274f,
@@ -19,6 +19,7 @@ $color-fondo: (
     texto-secondary:#b0b0c0,
     badge-fondo:    rgba(230, 51, 97, 0.2),
     badge-borde:    #e63361,
+    
 );
 
 /// Color de enlace de navegación
@@ -65,7 +66,7 @@ $font-sizes: (
     xxl:  3rem,
 );
 
-/// Familia tipográfica para títulos
+/// Familia tipofgrafica para títulos
 /// @group Tipografia
 $font-heading: 'Bebas Neue', cursive;
 

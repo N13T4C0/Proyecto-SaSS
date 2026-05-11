@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jose Antonio Nieto Perez">
+    <meta name="description" content="Landing Page en Sass de tokyo ghoul">
+
     <title>Tokyo Ghoul</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./scss/styles.scss" />
 </head>
 
@@ -17,7 +21,6 @@
     <!-- ENCABEZADO -->
     <header class="encabezado">
         <a href="#" class="logo">
-            <!-- <span class="logo__icono">▐▌</span> -->
             Tokyo<span>Ghoul</span>
         </a>
         <div class="encabezado__busqueda">
@@ -28,12 +31,12 @@
                     </path>
                 </svg> -->
             </span>
-            <input type="search" placeholder="Search a user or a movie" />
+            <input type="search" placeholder="Buscador" />
         </div>
         <nav class="navegacion">
             <ul>
                 <li><a href="#anime">Anime</a></li>
-                <li><a href="#resenas">Reseñas</a></li>
+                <li><a href="#">Reseñas</a></li>
             </ul>
         </nav>
         <div class="encabezado__acciones">
@@ -41,13 +44,13 @@
         </div>
     </header>
 
+    <main>
+
     <!-- HERO -->
-    <section class="hero" style="background-image: url(./img/hero2.png);">
+    <section class="hero">
         <div class="hero__capa"></div>
 
-        <div class="hero__capa"></div>
-
-        <div class="hero__interior">
+        <div class="hero__interior layout">
 
             <!-- Columna izquierda: portada + rating -->
             <div class="hero__izquierda">
@@ -87,9 +90,9 @@
                     <div class="hero__autores">
                         <p class="hero__etiqueta">Autores</p>
                         <div class="hero__avatares">
-                            <img src="./img/autor1.webp" alt="author" class="hero__avatar" />
-                            <img src="./img/autor2.jpg" alt="author" class="hero__avatar" />
-                            <img src="./img/autor3.webp" alt="author" class="hero__avatar" />
+                            <img src="./img/autor1.webp" alt="autor" class="hero__avatar" />
+                            <img src="./img/autor2.jpg" alt="autor " class="hero__avatar" />
+                            <img src="./img/autor3.webp" alt="autor" class="hero__avatar" />
                             <span class="hero__avatares-mas">+12</span>
                         </div>
                     </div>
@@ -120,6 +123,233 @@
 
         </div>
     </section>
+
+    <!-- EPISODIOS CARDS -->
+    <section class="episodios" id="anime">
+        <!-- <div class="episodios__capa"></div> -->
+
+        <div class="episodios__contenedor layout">
+
+            <div class="episodios__portada">
+                <!-- <img src="./img/portadaEpisodioK.png" alt="Portada del anime" /> -->
+                <img src="./img/PortadaIzquierda.jpeg" alt="Portada anime">
+            </div>
+
+            <div class="episodios__grid">
+
+                <article class="episodios-tarjeta ">
+                    <div class="episodios-tarjeta__media">
+                        <img src="./img/episodio1.webp" alt="Episodio 1">
+                    </div>
+                    <div class="episodios-tarjeta__contenido">
+                        <h3 class="episodios-tarjeta__titulo">Cafe y sangre</h3>
+                        <p class="episodios-tarjeta__texto">
+                            Tras el trasplante de varios órganos de ghoul, Kaneki se va convirtiendo poco a poco en una
+                            especie de monstruo. Por si eso no fuera suficiente problema, empieza a trabajar en el
+                            Anteiku pero se presentan unos peligrosos inspectores de ghouls, apodados “palomas”. </p>
+                    </div>
+                </article>
+
+                <article class="episodios-tarjeta ">
+                    <div class="episodios-tarjeta__media">
+                        <img src="./img/episodio2.webp" alt="Episodio 2">
+                    </div>
+                    <div class="episodios-tarjeta__contenido">
+                        <h3 class="episodios-tarjeta__titulo">Hinami</h3>
+                        <p class="episodios-tarjeta__texto">
+
+                            una pequeña que pierde a sus padres a manos de las “palomas”, se siente muy sola. Y para
+                            ayudarla, Kaneki y Touka se adentran en la CCG, el cuartel general de las “palomas”, para
+                            alejar la atención de ella. Pero, ¡ignoran la trágica espiral de pesar que les aguarda,
+                            contra los creadores de pesadillas llamados humanos.
+
+                        </p>
+                    </div>
+                </article>
+
+                <article class="episodios-tarjeta episodios-tarjeta--destacada">
+                    <div class="episodios-tarjeta__media">
+                        <img src="./img/episodio3.webp" alt="Episodio 3">
+                    </div>
+                    <div class="episodios-tarjeta__contenido">
+                        <h3 class="episodios-tarjeta__titulo">Gourmet</h3>
+                        <p class="episodios-tarjeta__texto">
+                            Tsukiyama, el Ghoul gourmet, aparece en Anteiku, cafetería frecuentada tanto por humanos
+                            como por ghouls. Las sospechas de Kaneki se reflejan en los ojos de Tsukiyama, que intentara
+                            hacer cualquier trampa para probar un sabor hasta ahora desconocido.
+
+                        </p>
+                    </div>
+                </article>
+
+                <article class="episodios-tarjeta">
+                    <div class="episodios-tarjeta__media">
+                        <img src="./img/episodio4.webp" alt="Episodio 4">
+                    </div>
+                    <div class="episodios-tarjeta__contenido">
+                        <h3 class="episodios-tarjeta__titulo">Final Traumatico</h3>
+                        <p class="episodios-tarjeta__texto">
+
+                            Kaneki, Nishiki y Touka plantan cara a Tsukiyama, el ghoul gourmet, quien da prioridad a sus
+                            antojos ante todo lo demás. ¿Qué idea se le ocurrirá a Kaneki para escapar de ese feroz y
+                            violento enfrentamiento...?
+                        </p>
+                    </div>
+                </article>
+
+           
+
+           
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- animes recomendados/relacionados -->
+    <section class="relacionados">
+
+        <h2 class="relacionados__titulo">Animes relacionados</h2>
+
+        <div class="relacionados__carrusel">
+            <div class="relacionados__track">
+
+                <!-- items originales -->
+                <article class="relacionados-tarjeta">
+                    <div class="relacionados-tarjeta__media">
+                        <img src="./img/relacionados1.jpeg" alt="Series relacionadas">
+                    </div>
+                </article>
+
+                <article class="relacionados-tarjeta">
+                    <div class="relacionados-tarjeta__media">
+                        <img src="./img/relacionados2.jpeg" alt="Series relacionadas">
+                    </div>
+                </article>
+
+                <article class="relacionados-tarjeta">
+                    <div class="relacionados-tarjeta__media">
+                        <img src="./img/relacionados3.jpeg" alt="Series relacionadas">
+                    </div>
+                </article>
+
+                <article class="relacionados-tarjeta">
+                    <div class="relacionados-tarjeta__media">
+                        <img src="./img/relacionados4.jpeg" alt="Series relacionadas">
+                    </div>
+                </article>
+
+                <article class="relacionados-tarjeta">
+                    <div class="relacionados-tarjeta__media">
+                        <img src="./img/relacionados5.jpeg" alt="Series relacionadas">
+                    </div>
+                </article>
+
+                <!-- duplicados para loop sin corte -->
+                <article class="relacionados-tarjeta" aria-hidden="true">
+                    <div class="relacionados-tarjeta__media">
+                        <img src="./img/relacionados1.jpeg" alt="">
+                    </div>
+                </article>
+
+                <article class="relacionados-tarjeta" aria-hidden="true">
+                    <div class="relacionados-tarjeta__media">
+                        <img src="./img/relacionados2.jpeg" alt="">
+                    </div>
+                </article>
+
+                <article class="relacionados-tarjeta" aria-hidden="true">
+                    <div class="relacionados-tarjeta__media">
+                        <img src="./img/relacionados3.jpeg" alt="">
+                    </div>
+                </article>
+
+                <article class="relacionados-tarjeta" aria-hidden="true">
+                    <div class="relacionados-tarjeta__media">
+                        <img src="./img/relacionados4.jpeg" alt="">
+                    </div>
+                </article>
+
+                <article class="relacionados-tarjeta" aria-hidden="true">
+                    <div class="relacionados-tarjeta__media">
+                        <img src="./img/relacionados5.jpeg" alt="">
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- formulario -->
+    <section class="suscripcion" id="comunidad">
+        <div class="suscripcion__interior">
+            <div class="suscripcion__texto">
+                <h2 class="suscripcion__titulo">Unete a la comunidad</h2>
+                <p class="suscripcion__descripcion">Recibe las ultimas noticias reseñas y recomendaciones de anime directamente en tu gmail</p>
+            </div>
+            <form class="suscripcion__form">
+                <div class="suscripcion__grupo">
+                    <label for="nombre" class="suscripcion__label">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="suscripcion__input" placeholder="nombre"  />
+                </div>
+                <div class="suscripcion__grupo">
+                    <label for="email" class="suscripcion__label">Correo electrónico</label>
+                    <input type="email" id="email" name="email" class="suscripcion__input" placeholder="tu@correo.com"  />
+                </div>
+                <div class="suscripcion__grupo">
+                    <label for="interes" class="suscripcion__label">Me interesa</label>
+                    <select id="interes" name="interes" class="suscripcion__input suscripcion__select">
+                        <option value="">Selecciona un género</option>
+                        <option value="accion">Acción</option>
+                        <option value="drama">Drama</option>
+                        <option value="horror">Horror</option>
+                        <option value="seinen">Seinen</option>
+                    </select>
+                </div>
+                <button type="button" class="btn-cta suscripcion__btn">Suscribirme</button>
+            </form>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__interior layout">
+            <a href="#" class="logo">Tokyo<span>Ghoul</span></a>
+            <nav class="footer__nav">
+                <ul>
+                    <li><a href="#anime">Anime</a></li>
+                    <li><a href="#">Reseñas</a></li>
+                    <li><a href="#comunidad">Comunidad</a></li>
+                </ul>
+            </nav>
+            <div class="footer__redes">
+                <a href="#" class="footer__red-social" aria-label="Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                    <span>Twitter</span>
+                </a>
+                <a href="#" class="footer__red-social" aria-label="Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" class="footer__red-social" aria-label="YouTube">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                    <span>YouTube</span>
+                </a>
+                <a href="#" class="footer__red-social" aria-label="Facebook">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="#" class="footer__red-social" aria-label="Twitch">
+                    <i class="fab fa-twitch" aria-hidden="true"></i>
+                    <span>Twitch</span>
+                </a>
+            </div>
+        </div>
+        <p class="footer__copy">Desarrollada por: Nieto</p>
+    </footer>
 
 </body>
 

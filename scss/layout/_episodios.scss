@@ -1,0 +1,47 @@
+@use "../abstracts" as a;
+
+.episodios {
+    @include a.img-overlay(rgba(10, 10, 10, 0.55));
+    padding: 3rem 2rem;
+    background-image: url(/img/FondoEpisodios.jpeg);
+    background-size: cover;
+    background-position: center;
+    // para q el contenido de las cards se quede por encima del overlay y resalte un pelin mas
+    &__contenedor {
+        position: relative;
+        
+        z-index: 1;
+    }
+
+    &__portada {
+        width: 100%;
+        border-radius: 0.8rem;
+        align-self: start;
+        position: sticky;
+        top: 1rem;
+        margin-left: 80%;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            border-radius: 0.8rem;
+        }
+
+        @include a.media(medium) {
+            display: none;
+        }
+    }
+
+    &__grid {
+        grid-column: 9;
+        @include a.grid-flexible(18rem, 2.5rem);
+        padding-right: 2rem;
+
+        @include a.media(small) {
+            @include a.grid-flexible(14rem, 1.5rem);
+            padding-right: 0;
+        }
+    }
+}
