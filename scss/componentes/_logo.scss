@@ -6,16 +6,9 @@
     align-items: center;
     gap: 0.4rem;
     font-family: a.$font-heading;
-    font-size: 1.5rem;
+    font-size: a.font-size(lg);
     color: a.color(texto-primary);
     text-decoration: none;
-
-    &__icono {
-        font-size: 1.4rem;
-        color: a.color(accent);
-        line-height: 1;
-    }
-
     span {
         color: a.color(accent);
     }

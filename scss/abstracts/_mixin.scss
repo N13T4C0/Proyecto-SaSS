@@ -119,3 +119,13 @@
         background-color: $color;
     }
 }
+
+/// MIXIN: CAPA OVERLAY HIJO
+/// Estilos para un elemento hijo que actúa como capa de oscurecimiento absoluta
+/// @group Layout
+/// @param {Value} $background [rgba(0,0,0,0.6)] - Fondo del overlay (admite gradientes)
+@mixin capa-overlay($background: rgba(0, 0, 0, 0.6)) {
+    position: absolute;
+    inset: 0;
+    background: $background;
+}

@@ -66,6 +66,18 @@ $font-sizes: (
     xxl:  3rem,
 );
 
+/// Obtiene un tamaño del mapa $font-sizes
+/// @group Tipografia
+/// @param {String} $size-name - Nombre del tamaño (xs, sm, base, md, lg, xl, xxl)
+/// @return {Length} Valor del tamaño solicitado
+@function font-size($size-name) {
+    @if map.has-key($font-sizes, $size-name) {
+        @return map.get($font-sizes, $size-name);
+    } @else {
+        @error "el tamaño no existe";
+    }
+}
+
 /// Familia tipofgrafica para títulos
 /// @group Tipografia
 $font-heading: 'Bebas Neue', cursive;

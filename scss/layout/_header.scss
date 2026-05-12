@@ -9,6 +9,7 @@
     top: 0;
     left: 0;
     right: 0;
+    // para que al bajar sobreponga el blur sino se queda atras
     z-index: 100;
     padding: 0.85rem;
     // fondo semitransparente para que el hero se vea a través; blur desenfoca lo que hay detrás

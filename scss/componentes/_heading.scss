@@ -3,7 +3,7 @@
 // Titulos de seccion
 .titulo-seccion {
     font-family: a.$font-heading;
-    font-size: 2rem;
+    font-size: a.font-size(xl);
     color: a.color(texto-primary);
     text-align: center;
     margin-bottom: 2rem;
