@@ -5,7 +5,7 @@
   "source": "index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build",
+    "build": "parcel build --public-url ./",
     "sassdoc": "sassdoc scss/**/*.scss -d sassdoc"
   },
   "keywords": [],
